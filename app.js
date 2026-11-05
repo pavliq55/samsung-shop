@@ -166,7 +166,8 @@ form.addEventListener("submit", function (e) {
   var btn = form.querySelector('button[type="submit"]');
   btn.disabled = true;
   var done = function () { btn.disabled = false; form.reset(); ok.hidden = false; };
+  var fail = function () { btn.disabled = false; err.textContent = "Не отправилось, попробуйте ещё раз"; err.hidden = false; };
   if (!FORM_ENDPOINT) { done(); return; }
   fetch(FORM_ENDPOINT, {method: "POST", headers: {"Content-Type": "application/json", "Accept": "application/json"}, body: JSON.stringify(data)})
-    .then(done, function () { btn.disabled = false; err.textContent = "Не отправилось, попробуйте ещё раз"; err.hidden = false; });
+    .then(function (r) { if (r.ok) done(); else fail(); }, fail);
 });
