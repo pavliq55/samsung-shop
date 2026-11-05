@@ -1,5 +1,5 @@
 // Куда уходят заявки: адрес обработчика формы. Пусто — заявка только показывает «принята».
-var FORM_ENDPOINT = "https://formsubmit.co/ajax/babichev.aa@gmail.com";
+var FORM_ENDPOINT = location.hostname.indexOf("github.io") > -1 ? "https://formsubmit.co/ajax/babichev.aa@gmail.com" : "send.php";
 
 var SPECS = {
  "Samsung Galaxy S26 Ultra": [
