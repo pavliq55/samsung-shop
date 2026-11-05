@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Магазин — смартфоны Samsung</title>
+<meta name="description" content="Магазин электроники: популярные смартфоны Samsung. Оставьте заявку, перезвоним и подберём модель.">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="top">
+  <div class="wrap top__in">
+    <a class="logo" href="#">Магазин</a>
+    <nav class="nav">
+      <a href="#catalog">Каталог</a>
+      <a href="#reviews">Отзывы</a>
+      <a href="#order" class="nav__btn">Оставить заявку</a>
+    </nav>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="wrap hero__in">
+    <div class="hero__text">
+      <p class="hero__kicker">Магазин электроники</p>
+      <h1>Смартфоны Samsung</h1>
+      <p class="hero__lead">Девять самых популярных моделей Samsung. Оставьте номер, перезвоним, поможем выбрать и оформим заказ.</p>
+      <ul class="hero__list">
+        <li>Новые, в заводской упаковке</li>
+        <li>Гарантия на каждый телефон</li>
+        <li>Доставка и самовывоз</li>
+      </ul>
+      <a href="#catalog" class="btn btn--ghost">Смотреть каталог</a>
+    </div>
+    <form class="lead" id="order" novalidate>
+      <h2 class="lead__title">Заявка на звонок</h2>
+      <p class="lead__sub">Перезвоним и ответим на вопросы</p>
+      <label class="field">
+        <span>Имя</span>
+        <input type="text" name="name" autocomplete="name" placeholder="Как к вам обращаться">
+      </label>
+      <label class="field">
+        <span>Телефон *</span>
+        <input type="tel" name="phone" autocomplete="tel" inputmode="tel" placeholder="+7 (___) ___-__-__" required>
+      </label>
+      <label class="field">
+        <span>Модель</span>
+        <select name="model" id="model">
+          <option value="">Пока не выбрал</option>
+        </select>
+      </label>
+      <button type="submit" class="btn btn--main">Отправить заявку</button>
+      <p class="lead__ok" hidden>Спасибо! Заявка принята, скоро перезвоним.</p>
+      <p class="lead__err" hidden>Укажите номер телефона полностью.</p>
+      <p class="lead__note">Нажимая кнопку, вы соглашаетесь на обработку персональных данных</p>
+    </form>
+  </div>
+</section>
+
+<section class="catalog" id="catalog">
+  <div class="wrap">
+    <h2 class="section-title">Каталог</h2>
+    <div class="grid" id="grid"></div>
+  </div>
+</section>
+
+<section class="reviews" id="reviews">
+  <div class="wrap">
+    <h2 class="section-title">Отзывы</h2>
+    <div class="rev">
+      <div class="rev__item"><div class="rev__head"><div class="rev__ava">М</div><div><div class="rev__name">Михаил</div><div class="rev__stars">★★★★★</div></div></div><p class="rev__text">Купил S25 Ultra, перезвонили через 10 минут, на следующий день телефон был у меня. Всё классно, рекомендую.</p></div>
+      <div class="rev__item"><div class="rev__head"><div class="rev__ava">З</div><div><div class="rev__name">Зинаида</div><div class="rev__stars">★★★★★</div></div></div><p class="rev__text">Брала маме A36. Помогли выбрать, всё объяснили, телефон новый, в упаковке. Спасибо!</p></div>
+      <div class="rev__item"><div class="rev__head"><div class="rev__ava">Н</div><div><div class="rev__name">Николай</div><div class="rev__stars">★★★★★</div></div></div><p class="rev__text">Заказал A56, цена ниже, чем в салонах. Доставка быстрая, всё работает отлично.</p></div>
+    </div>
+  </div>
+</section>
+
+<footer class="foot">
+  <div class="wrap foot__in">
+    <span>© Магазин, 2026</span>
+    <span class="foot__photo">Фото: <a href="credits.html">Wikimedia Commons, CC BY / CC BY-SA</a></span>
+  </div>
+</footer>
+
+<script src="app.js"></script>
+</body>
+</html>
