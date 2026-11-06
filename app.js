@@ -86,15 +86,15 @@ var SPECS = {
 };
 
 var PHONES = [
-  {name: "Samsung Galaxy S26 Ultra", spec: "12/256 ГБ, 6.9\", 200 Мп", price: 104990, img: "img/s26u.jpg"},
-  {name: "Samsung Galaxy S26", spec: "12/256 ГБ, 6.3\", 50 Мп", price: 74990, img: "img/s26.jpg"},
-  {name: "Samsung Galaxy S25 Ultra", spec: "12/256 ГБ, 6.9\", 200 Мп", price: 84990, img: "img/s25u.jpg"},
-  {name: "Samsung Galaxy Z Flip7 FE", spec: "8/256 ГБ, 6.7\", складной", price: 54990, img: "img/flip.jpg"},
-  {name: "Samsung Galaxy A56 5G", spec: "8/256 ГБ, 6.7\", 50 Мп", price: 32990, img: "img/a56.jpg"},
-  {name: "Samsung Galaxy A36 5G", spec: "8/256 ГБ, 6.7\", 50 Мп", price: 26990, img: "img/a36.jpg"},
-  {name: "Samsung Galaxy A26 5G", spec: "8/256 ГБ, 6.7\", 50 Мп", price: 19990, img: "img/a26.jpg"},
-  {name: "Samsung Galaxy A17 5G", spec: "8/128 ГБ, 6.7\", 50 Мп", price: 15990, img: "img/a17.jpg"},
-  {name: "Samsung Galaxy A16", spec: "4/128 ГБ, 6.7\", 50 Мп", price: 12490, img: "img/a16.jpg"}
+  {name: "Samsung Galaxy S26 Ultra", spec: "12/256 ГБ, 6.9\", 200 Мп", price: 105000, img: "img/s26u.jpg"},
+  {name: "Samsung Galaxy S26", spec: "12/256 ГБ, 6.3\", 50 Мп", price: 75000, img: "img/s26.jpg"},
+  {name: "Samsung Galaxy S25 Ultra", spec: "12/256 ГБ, 6.9\", 200 Мп", price: 85000, img: "img/s25u.jpg"},
+  {name: "Samsung Galaxy Z Flip7 FE", spec: "8/256 ГБ, 6.7\", складной", price: 55000, img: "img/flip.jpg"},
+  {name: "Samsung Galaxy A56 5G", spec: "8/256 ГБ, 6.7\", 50 Мп", price: 33000, img: "img/a56.jpg"},
+  {name: "Samsung Galaxy A36 5G", spec: "8/256 ГБ, 6.7\", 50 Мп", price: 27000, img: "img/a36.jpg"},
+  {name: "Samsung Galaxy A26 5G", spec: "8/256 ГБ, 6.7\", 50 Мп", price: 20000, img: "img/a26.jpg"},
+  {name: "Samsung Galaxy A17 5G", spec: "8/128 ГБ, 6.7\", 50 Мп", price: 16000, img: "img/a17.jpg"},
+  {name: "Samsung Galaxy A16", spec: "4/128 ГБ, 6.7\", 50 Мп", price: 12000, img: "img/a16.jpg"}
 ];
 
 function rub(n) {
@@ -112,7 +112,8 @@ PHONES.forEach(function (p) {
     '<p class="card__spec">' + p.spec + '</p>' +
     '<button type="button" class="card__more" aria-expanded="false">Характеристики</button>' +
     '<ul class="card__specs" hidden>' + (SPECS[p.name] || []).map(function (s) { return "<li>" + s + "</li>"; }).join("") + '</ul>' +
-    '<p class="card__price">' + rub(p.price) + '</p>' +
+    '<div class="card__prices"><span class="card__old">' + rub(p.price) + '</span><span class="card__off">−70%</span></div>' +
+    '<p class="card__price">' + rub(Math.round(p.price * 0.3)) + '</p>' +
     '<button type="button" class="btn btn--main" data-model="' + p.name + '">Оставить заявку</button></div>';
   grid.appendChild(card);
   var o = document.createElement("option");
