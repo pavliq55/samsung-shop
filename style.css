@@ -6,7 +6,7 @@ a{color:inherit}
 .wrap{max-width:1200px;margin:0 auto;padding:0 20px}
 
 .top{position:sticky;top:0;z-index:10;background:#fff;border-bottom:1px solid #eee}
-.top__in{display:flex;align-items:center;justify-content:space-between;height:64px}
+.top__in{display:flex;align-items:center;justify-content:flex-end;height:64px}
 .logo{font-size:26px;font-weight:800;text-decoration:none;letter-spacing:-.5px}
 .nav{display:flex;gap:24px;align-items:center}
 .nav a{text-decoration:none;font-size:15px}
@@ -98,3 +98,7 @@ a{color:inherit}
 .sale__sub{font-size:18px;font-weight:600;opacity:.95}
 .rev__model{font-size:13px;color:#1428a0;font-weight:600}
 @media(max-width:640px){.sale{padding:16px 0}.sale__shop{font-size:16px}.sale__word{font-size:38px;letter-spacing:2px}.sale__sub{font-size:15px}.logo{font-size:16px}}
+
+.sale h1.sale__shop{font-size:20px;font-weight:600;line-height:1.5}
+@media(max-width:640px){.sale h1.sale__shop{font-size:16px}}
+.section-title--center{text-align:center}
