@@ -102,3 +102,7 @@ a{color:inherit}
 .sale h1.sale__shop{font-size:20px;font-weight:600;line-height:1.5}
 @media(max-width:640px){.sale h1.sale__shop{font-size:16px}}
 .section-title--center{text-align:center}
+.sale h1.sale__shop,.sale__sub{font-size:40px;font-weight:800;line-height:1.15;opacity:1}
+.sale__word{margin:6px 0}
+@media(max-width:900px){.sale h1.sale__shop,.sale__sub{font-size:32px}}
+@media(max-width:640px){.sale h1.sale__shop,.sale__sub{font-size:min(24px,5.6vw)}}
